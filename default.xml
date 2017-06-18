@@ -28,7 +28,38 @@
            remote="github"
            sync-c="true"
            sync-j="4" />
+<remote name="bucket" fetch="https://bitbucket.org" revision="master" />
 
+     <!-- Device Folders, Kernel & Proprietary BLOBS -->
+     <project path="vendor/huawei" name="CM13-Y300/proprietary_vendor_huawei" remote="github" revision="cm-13.0"/>
+     <project path="kernel/huawei/huawei-kernel-3.4" name="SlimLP-Y300/chil360-kernel" remote="github" revision="mm6.0"/>
+     <project path="device/huawei/msm7x27a-common" name="CM13-Y300/android_device_huawei_msm7x27a-common" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8833" name="CM13-Y300/android_device_huawei_u8833" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8951" name="CM13-Y300/android_device_huawei_u8951" remote="github" revision="cm-13.0"/>
+     <project path="device/huawei/u8825" name="CM13-Y300/android_device_huawei_u8825" remote="github" revision="cm-13.0"/>
+
+     <!-- WIFI -->
+     <project path="hardware/atheros/wifi/ath6kl-huawei" name="SlimLP-Y300/android_hardware_atheros_wifi_ath6kl-huawei" remote="github" revision="master" />
+     <project path="hardware/atheros/wlan" name="CM13-Y300/android_hardware_atheros_wlan" remote="github" revision="cm-13.0" />
+
+     <!-- GPS -->
+     <remove-project name="CyanogenMod/android_hardware_qcom_gps" />
+     <project path="hardware/qcom/gps" name="CM13-Y300/android_hardware_qcom_gps" remote="github" revision="cm-13.0" />
+
+     <!-- QCOM Hardware -->
+     <project path="hardware/qcom/display-caf/msm7x27a" name="CM13-Y300/android_hardware_qcom_display-caf" remote="github" revision="cm-13.0" />
+     <project path="hardware/qcom/media-caf/msm7x27a" name="SlimLP-Y300/hardware_qcom_media" remote="github" revision="lp5.1" />
+
+     <!-- Stlport -->
+     <project path="external/stlport" name="CyanogenMod/android_external_stlport" remote="github" revision="cm-13.0" />
+
+	 <!-- UBERTC 4.9 kernel toolchain -->
+     <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" />
+     <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="UBERTC/arm-eabi-4.9" groups="pdk,linux,arm" remote="bucket"/>
+
+	 <!-- OTAUpdater -->
+     <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
+     <project path="packages/apps/OTAUpdater" name="CM13-Y300/packages_apps_OTAUpdater" remote="github" revision="cm-13.0"/>
 <!-- BEGIN CYANOGENMOD -->
   <project path="build" name="crdroidandroid/android_build" remote="github" revision="6.0">
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -335,7 +366,7 @@
   <project path="external/apache-commons-math" name="platform/external/apache-commons-math" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/apache-harmony" name="platform/external/apache-harmony" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk" remote="aosp" />
-  <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" />
+  <project path="external/bison" name="platform/external/b groups=ison" groups="pdk" remote="aosp" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" remote="aosp" />
   <project path="external/cblas" name="platform/external/cblas" groups="pdk" remote="aosp" />
