@@ -55,10 +55,7 @@
 	 <!-- UBERTC 4.9 kernel toolchain -->
      <!--remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" /-->
      <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="UBERTC/arm-eabi-4.9" groups="pdk,linux,arm" remote="bucket"/>
-
-	 <!-- OTAUpdater -->
-     <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
-    
+	    
 <!-- BEGIN CYANOGENMOD -->
   <project path="build" name="crdroidandroid/android_build" remote="github" revision="6.0">
     <copyfile src="core/root.mk" dest="Makefile" />
